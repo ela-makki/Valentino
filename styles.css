@@ -178,7 +178,7 @@ body {
     0 24px 40px -8px #DAD4B5, /* Bottom shadow */
     0 -24px 40px -8px #DAD4B5; /* Top shadow */
   width: 450px;
-  height: 700px;
+  height: 900px;
 }
 
 .inside_card {
@@ -193,7 +193,7 @@ body {
     0 24px 40px -8px #DAD4B5, /* Bottom shadow */
     0 -24px 40px -8px #DAD4B5; /* Top shadow */
   width: 450px;
-  height: 700px;
+  height: 900px;
   z-index: -1;
   left: 0;
   top: 0;
