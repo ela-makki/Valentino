@@ -1,0 +1,212 @@
+body {
+  margin: 0;
+  padding: 16px;
+  height: 100vh;
+  background: #800000;
+  display: flex;
+  align-items: flex-start; /* Aligns items to the top */
+  justify-content: center;
+  padding-top: 10px; /* Adjust the value to increase spacing */
+}
+.valentines_card {
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+  transition: 4s;
+  margin: 40px;
+  margin-bottom: 100px;
+  margin-top: 100px; /* Adjust this value for spacing */
+}
+
+  @font-face {
+    font-family: 'nexa_boldregular';
+    font-weight: bold;
+    font-style: normal;
+    src: url('../fonts/nexa_boldfree_macroman/Nexa_Free_Bold-webfont.eot');
+    src: url('../fonts/nexa_boldfree_macroman/Nexa_Free_Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/nexa_boldfree_macroman/Nexa_Free_Bold-webfont.woff2') format('woff2'), url('../fonts/nexa_boldfree_macroman/Nexa_Free_Bold-webfont.woff') format('woff'), url('../fonts/nexa_boldfree_macroman/Nexa_Free_Bold-webfont.ttf') format('truetype'), url('../fonts/nexa_boldfree_macroman/Nexa_Free_Bold-webfont.svg#nexa_boldregular') format('svg');
+  }
+  
+
+  ul.grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .hidden {
+    position: absolute;
+    overflow: visible !important;
+      width: auto !important;
+      height: auto !important;
+    pointer-events: none;
+  }
+  
+  
+  @-webkit-keyframes spinLoader {
+    to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spinLoader {
+    to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  .grid__item {
+    position: relative;
+    width: 50%;
+    min-width: 280px;
+    margin: 0 0 2em;
+    padding: 1em 4em 0;
+  }
+  
+  
+  .no-js .grid__item {
+    display: inline-block;
+    width: calc(33.33% - 0.4em);
+    margin: 2em 0;
+  }
+  
+  @media screen and (max-width: 36em) {
+    .grid__item {
+      width: 100%;
+      margin: 2em 0;
+      padding: 1em 2em 0;
+    }
+  }
+  
+
+  /* image wrap and deco lp */
+  
+  .img-wrap {
+    position: relative;
+  }
+  
+  .lp {
+    position: absolute;
+  }
+  
+  .lp--grid {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translate3d(10%, 0, 0);
+    transform: translate3d(10%, 0, 0);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+  }
+  
+  .grid__link:hover .lp {
+    -webkit-transform: translate3d(20%, 0, 0);
+    transform: translate3d(20%, 0, 0);
+  }
+  
+  .img {
+    display: block;
+  }
+  
+  .img--grid {
+    position: relative;
+    max-width: 100%;
+    box-shadow: 2px 16px 26px 0px rgba(36, 33, 69, 0.3);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+  
+  .artist {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 1em 0 0.5em;
+    color: black;
+  }
+  
+.front_img {
+  width: 450px;
+  margin-right: -50px;
+  margin-left: -50px;
+  margin-top: 100px;
+  position: relative;
+}
+
+.inside_img {
+  width: 350px;
+  margin-right: -50px;
+  margin-left: -50px;
+  margin-top: 100px;
+  position: relative;
+}
+
+.valentines_card:hover .front_card {
+  transform: rotateY(-160deg);
+}
+.valentines_card:hover .front_text {
+  display: none;
+}
+.front_text,
+.inside_text {
+  color: #982B1C;
+  font-family: "Brush Script MT", cursive;
+  font-size: 24px;
+}
+.custom-link {
+  color: black ;
+  font-size: 24px;
+}
+
+.custom-link:hover {
+  color: darkred; /* Change color when hovered */
+}
+
+
+.front_card {
+  position: relative;
+  overflow: hidden;
+  transform-origin: left;
+  margin: 100;
+  padding: 16px;
+  background-color: #F2E8C6;
+  text-align: center;
+  box-shadow: 
+    0 24px 40px -8px #DAD4B5, /* Bottom shadow */
+    0 -24px 40px -8px #DAD4B5; /* Top shadow */
+  width: 450px;
+  height: 700px;
+}
+
+.inside_card {
+  position: absolute;
+  overflow: hidden;
+  transform-origin: left;
+  margin: 100;
+  padding: 16px;
+  background-color: #F2E8C6;
+  text-align: center;
+  box-shadow: 
+    0 24px 40px -8px #DAD4B5, /* Bottom shadow */
+    0 -24px 40px -8px #DAD4B5; /* Top shadow */
+  width: 450px;
+  height: 700px;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+.valentines_card audio {
+  display: none;
+}
+
+.valentines_card:hover .front_img {
+  display: none;
+}
+.inside_card audio {
+  display: flex;
+  margin-left: 50px;
+  margin-right: 40px;
+}
